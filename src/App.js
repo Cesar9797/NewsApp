@@ -22,7 +22,6 @@ function App() {
     <div className="App container mt-3">
 
       <BrowserRouter>
-      <NavBar/>
         <Routes>
           <Route path='/' element={<MainPage />}/>
         </Routes>

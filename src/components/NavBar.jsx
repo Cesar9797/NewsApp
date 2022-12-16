@@ -1,19 +1,39 @@
-import {Link, } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import SectionFavorite from "./SectionFavorites";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { useState } from 'react';
 
-export default function NavBar() {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 p-2">
-  <Link className="navbar-brand" to={'/'}>NewsApi</Link>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div className="navbar-nav">
-      <Link className="nav-item nav-link active" > Favorites <span className="sr-only">(current)</span></Link>
-      <Link className="nav-item nav-link" >Features</Link>
-    </div>
-  </div>
-</nav>
-    )
+export default function NavBar({selectedNumPages}) {
+  const navigate = useNavigate();
+
+
+ 
+
+  return (
+    <Container className="mb-3">
+      <Navbar expand="lg" variant="light" bg="light">
+        <Navbar.Brand className="px-3" onClick={() => navigate("/")}>
+          News Api
+        </Navbar.Brand>
+        <Nav className="me-auto d-flex justify-content-between" style={{width: "80%"}}>
+          <SectionFavorite />
+          <div className="options d-flex align-items-center">
+            <label className="lbl-pxp">News per page: </label>
+            <select name="pxp" onChange={e => selectedNumPages(e.target.value)}>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+              <option value={5}>5</option>
+              <option value={6}>6</option>
+              <option value={7}>7</option>
+              <option value={8}>8</option>
+              <option value={9}>9</option>
+              <option value={10}>10</option>
+            </select>
+          </div>
+        </Nav>
+      </Navbar>
+    </Container>
+  );
 }

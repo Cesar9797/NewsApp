@@ -1,0 +1,131 @@
+.fav_btn {
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 10%;
+}
+
+.nfav_btn {
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 10%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 479px){
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;  
+        width: 30px;
+        height: 30px; 
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;  
+        width: 30px;
+        height: 30px;  
+    }
+
+
+    .fa-2xl{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 575px) {
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;
+        width: 30px;
+        height: 30px;  
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+  
+    }
+
+
+    .fa-2xl{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 576px){
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .fav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;     
+    }
+
+    .nfav_btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;      
+    }
+}
+
+

@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
 .App {
   width: 80%;
   margin: 0 auto;
+}
+
+.title{
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
 }
 
