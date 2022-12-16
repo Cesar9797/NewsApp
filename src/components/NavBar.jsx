@@ -15,11 +15,11 @@ export default function NavBar({selectedNumPages}) {
         <Navbar.Brand className="px-3" onClick={() => navigate("/")}>
           News Api
         </Navbar.Brand>
-        <Nav className="me-auto d-flex justify-content-between" style={{width: "80%"}}>
+        <Nav className="me-auto d-flex justify-content-between" style={{width: "100%"}}>
           <SectionFavorite />
           <div className="options d-flex align-items-center">
             <label className="lbl-pxp">News per page: </label>
-            <select name="pxp" onChange={e => selectedNumPages(e.target.value)}>
+            <select name="pxp" className="me-3" onChange={e => selectedNumPages(e.target.value)}>
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
