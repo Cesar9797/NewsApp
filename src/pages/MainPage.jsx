@@ -21,7 +21,6 @@ export default function MainPage() {
   const [numPages, setNumPages] = useState(10);
 
 
-
   const lastIndex = currentPage * numPages;
   const firstIndex = lastIndex - numPages;
   const currentNews = news.slice(firstIndex, lastIndex);

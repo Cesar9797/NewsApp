@@ -19,7 +19,7 @@ export default function NavBar({selectedNumPages}) {
           <SectionFavorite />
           <div className="options d-flex align-items-center">
             <label className="lbl-pxp">News per page: </label>
-            <select name="pxp" className="me-3" onChange={e => selectedNumPages(e.target.value)}>
+            <select name="pxp" className="me-3" defaultValue={5} onChange={e => selectedNumPages(e.target.value)}>
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>

@@ -1,10 +1,9 @@
 import "./App.css";
 import MainPage from "./pages/MainPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch } from 'react-redux';
 import { useEffect } from "react";
 import { setNewsThunk } from './features/news/news.slice';
-import NavBar from "./components/NavBar";
 
 function App() {
 
@@ -12,10 +11,9 @@ function App() {
 
   const news = JSON.parse(localStorage.getItem('news'));
 
-
   useEffect(() => {
       dispatch(setNewsThunk());
-  }, []);
+  }, [news]);
 
 
   return (
@@ -23,7 +21,9 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MainPage />}/>
+          {
+            news && <Route path='/' element={<MainPage />}/>
+          }
         </Routes>
       </BrowserRouter>
     </div>

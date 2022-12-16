@@ -13,7 +13,8 @@ export const newsSlice = createSlice({
         n.isFavorite = false;
         n.id = uuidv4();
       });
-      if(state === []){
+
+      if(JSON.parse(localStorage.getItem('news')) === null){
         localStorage.setItem('news',JSON.stringify(news));
       }
       return news;
