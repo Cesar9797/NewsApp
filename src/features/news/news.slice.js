@@ -37,7 +37,7 @@ export const { setNews, updateNews } = newsSlice.actions;
 
 export const setNewsThunk = () => (dispatch) => {
   axios.get(
-    "https://newsapi.org/v2/everything?q=tesla&from=2022-11-15&sortBy=publishedAt&apiKey=3f5daa84d6a54f24b8b1d1450be963f5"
+    "https://newsapi.org/v2/everything?q=tesla&from=2022-11-16&sortBy=publishedAt&apiKey=3f5daa84d6a54f24b8b1d1450be963f5"
   ).then(res => dispatch(setNews(res.data.articles)));
 };
 
